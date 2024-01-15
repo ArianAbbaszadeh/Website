@@ -8,12 +8,15 @@ body{
 }
 
 .menu{
-	font-size: 2vw ;
 	vertical-align: top;
 	float:left;
 }
 
 @media only screen and (min-aspect-ratio: 3/2){
+	.menu{
+		font-size: 2vw;
+	}
+
 	.list-item{
 		font-size: 1.5vw;
 	}
@@ -22,6 +25,7 @@ body{
 		font-size: 1.5vw;
 	}
 	.contact-field{
+		font-size: 1.5vw;
 		width: 20vw;
 	}
 	.contact-message{
@@ -42,6 +46,7 @@ body{
 		font-size: 3vw;
 	}
 	.contact-field{
+		font-size: 3vw;
 		width: 80vw;
 	}
 
@@ -156,7 +161,6 @@ body{
 	font-family: 'Courier New', monospace;
 	padding: 10px;
 	border-radius: 30px;
-	font-size: 18px;
 	border: 3px;
 	border-style: solid;
 	border-color:cornflowerblue;
