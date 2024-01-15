@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="main.css">
+		<script type="text/javascript" src="main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script>
+			$(function(){
+					$("#content-div").load("home.html");
+			});
+	</script>
+	</head>
+	<body>
+		<div class="menu">
+			<p class="menu-item name reactive">
+				Arian Abbaszadeh (Developer)
+			</p>
+			
+			<p id="home" style="font-weight: bolder;" class="menu-item selectable reactive" onclick= "selection(this.id)">
+				Home
+			</p>
+			<p id="projects" class="menu-item selectable reactive" onclick= "selection(this.id)">
+				Projects
+			</p>
+			<p id="experience" class="menu-item selectable reactive" onclick= "selection(this.id)">
+				Experience
+			</p>
+			<p id="contact" class="menu-item selectable reactive" onclick= "selection(this.id)">
+				Contact
+			</p>
+		</div>
+		<div id="content-div" class = "content">
+			
+		
+	</body>
+</html>

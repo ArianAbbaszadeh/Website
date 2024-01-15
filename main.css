@@ -1,0 +1,149 @@
+html {
+  padding: calc(3* (1vh + 1vw)/2);
+}
+
+body{
+	font-family: 'Courier New';
+	font-size: 18px;
+	overflow: hidden;
+	user-select: none;
+}
+
+.content{
+	display: inline-block;
+}
+
+.menu{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.menu-item{
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.name{
+	cursor: default;
+}
+.reactive{
+  display: flex;
+}
+.selectable{
+  cursor: pointer;
+  transition-property: opacity font-weight transform;
+	transition-duration: 0.3s;
+	opacity: 1;
+}
+
+.selectable:hover{
+  opacity: 0.1;
+}
+
+.quote{
+	width: 100px;
+	margin: 30vh;
+	vertical-align: top;
+	cursor:default;
+}
+
+.list {
+	display: inline-block;
+}
+
+.list-item{
+	display: block;
+	text-align: right;
+	float: right;
+	clear: right;
+	cursor: pointer;
+	transition: 0.3s;
+	background-image: linear-gradient(
+		20deg, 
+		#8BC6EC, 
+		#B721FF 50%,
+		black 50%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 300%;
+	background-position: 100%;
+	
+}
+
+.gradient-2{
+	background-image: linear-gradient(
+		20deg, 
+		#c85555, 
+		#ffaa21 50%,
+		black 50%);
+}
+
+.list-item:hover{
+	transform: translateY(-5px) skewX(10deg) rotateX(20deg);
+	background-position: 0%;
+}
+
+.list-item-name{
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.list-item-year{
+	vertical-align: top;
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.list-item-skills{
+	font-size: 16px;
+	margin-top: 0;
+	display: block;
+}
+
+.contact{
+	display: inline-block;
+}
+
+.contact-top-row{
+	display: block;
+}
+
+.contact-field{
+	float: right;
+	margin: 10px;
+	font-family: 'Courier New', monospace;
+	padding: 10px;
+	border-radius: 30px;
+	font-size: 18px;
+	border: 3px;
+	border-style: solid;
+	border-color:cornflowerblue;
+}
+
+.contact-message{
+	display: inline-block;
+	width: 91%;	
+}
+
+.contact-submit{
+	float: right;
+	background-color: rgb(142, 174, 235);
+	font-weight:bold;
+	border-color: black;
+	transition: 0.15s
+}
+
+.contact-submit:hover{
+	box-shadow: 0 5px 0 0;
+	transform: translateY(-5px);
+	background-color: cornflowerblue;
+}
+
+.contact-submit:active{
+	background-color: rgb(45, 112, 235);
+	box-shadow: 0 0 0 0;
+	transform: translateY(0);
+}
