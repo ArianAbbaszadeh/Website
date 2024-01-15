@@ -1,18 +1,7 @@
 body{
 	font-family: 'Courier New';
-	font-size: 18px;
 	user-select: none;
 	margin: calc(3* (1vh + 1vw)/2);
-}
-@media screen and (max-width: 480px){
-	body{
-		font-family: 'Courier New';
-		font-size: 18px;
-		user-select: none;
-		margin: calc(3* (1vh + 1vw)/2);
-		width: 50%;
-		overflow: hidden;
-	}
 }
 .content{
 	float: right;
@@ -23,7 +12,14 @@ body{
 	float:left;
 }
 
-.menu-item{
+@media only screen and (max-aspect-ratio: 1){
+	.menu{
+		font-size: calc(5vw);
+	}
+	
+}
+
+.menu-item{	
 	margin-top: 0;
 	margin-bottom: 40px;
 }
@@ -45,6 +41,7 @@ body{
   opacity: 0.1;
 }
 
+
 .quote{
 	padding-right: 20vw;
 	padding-top: 20vh;
@@ -59,6 +56,7 @@ body{
 }
 
 .list-item{
+	border: none;
 	display: block;
 	text-align: right;
 	margin-left: 25px;
@@ -95,7 +93,10 @@ body{
 	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 0;
+	transition: 1s;
 }
+
+
 
 .list-item-year{
 	vertical-align: top;
