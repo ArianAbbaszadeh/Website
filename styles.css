@@ -8,15 +8,44 @@ body{
 }
 
 .menu{
+	font-size: 2vw ;
 	vertical-align: top;
 	float:left;
+	transition: font-size 0.5s;
 }
-
-@media only screen and (max-aspect-ratio: 1){
-	.menu{
-		font-size: calc(5vw);
+@media only screen and (min-aspect-ratio: 3/2){
+	.list-item{
+		font-size: 1.5vw;
 	}
-	
+	.quote{
+		font-size: 1.5vw;
+	}
+	.contact-field{
+		width: 20vw;
+	}
+	.contact-message{
+		width: calc(40vw + 45px);
+	}
+}
+@media only screen and (max-aspect-ratio: 3/2){
+	.menu{
+		font-size: 5vw;
+	}
+
+	.list-item{
+		font-size: 3vw;
+	}
+
+	.quote{
+		font-size: 3vw;
+	}
+	.contact-field{
+		width: 80vw;
+	}
+
+	.contact-message{
+		width: 80vw;
+	}
 }
 
 .menu-item{	
@@ -121,7 +150,6 @@ body{
 }
 
 .contact-field{
-	width: 80%;
 	float: right;
 	margin: 10px;
 	font-family: 'Courier New', monospace;
@@ -134,12 +162,13 @@ body{
 }
 
 .contact-message{
-	display: inline-block;
+	display: block;
 }
 
 .contact-submit{
 	width: auto;
 	float: right;
+	clear: both;
 	color: black;
 	background-color: rgb(142, 174, 235);
 	font-weight:bold;
