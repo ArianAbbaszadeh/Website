@@ -1,13 +1,19 @@
-
-
 body{
 	font-family: 'Courier New';
 	font-size: 18px;
 	user-select: none;
 	margin: calc(3* (1vh + 1vw)/2);
-	text-overflow: hidden;
 }
-
+@media screen and (max-width: 480px){
+	body{
+		font-family: 'Courier New';
+		font-size: 18px;
+		user-select: none;
+		margin: calc(3* (1vh + 1vw)/2);
+		width: 50%;
+		overflow: hidden;
+	}
+}
 .content{
 	float: right;
 }
@@ -133,6 +139,7 @@ body{
 .contact-submit{
 	width: auto;
 	float: right;
+	color: black;
 	background-color: rgb(142, 174, 235);
 	font-weight:bold;
 	border-color: black;
