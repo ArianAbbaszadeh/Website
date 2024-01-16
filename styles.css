@@ -12,6 +12,7 @@
 		#b700ff 50%,
 		black 50%);
 	--mode: 0;
+	--dimbackground: 55vh;	
 }
 
 body{
@@ -124,13 +125,17 @@ body{
 }
 
 .selectable:hover{
-  opacity: 0.3	;
+  opacity: 0.3;
 }
 
 .links{
 	display: block;
 }
 
+#github{
+	transition: filter 0.5s;
+	filter: invert(var(--mode));
+}
 
 .link{
 	margin-right: 10px;
@@ -151,36 +156,60 @@ body{
 	bottom: 20vh;
 	left: 25vw;
 	z-index: -100;
-	width: 60vh;
-  height: 60vh;
-  filter: blur(15vh);
-  background-image: linear-gradient(
+	width: var(--dimbackground);
+  height: var(--dimbackground);
+  filter: blur(80px);
+	background-image: linear-gradient(
 		20deg, 
-		#00ffd9, 
-		#B721FF);
-  animation: rotate 20s cubic-bezier(1, 0.3, 0.3, 1) alternate infinite;
+		rgb(166, 0, 255), 
+		#109ce7);
+  animation: rotate 60s cubic-bezier(0, 0.3, 0.3, 1) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 .background-2{
-	bottom: 10vh;
-	left: 50vw;
-	width: 50vh;
-	height: 50vh;
+	width: calc(var(--dimbackground) * 0.5);
+	height: calc(var(--dimbackground) * 0.5);	
+	bottom: 30vh;
+	left: 35vw;
 	z-index: -99;
-	animation: rotate 40s cubic-bezier(1, 0.3, 0.3, 1) alternate infinite;
+	background-image: linear-gradient(
+		20deg, 
+		#00ffd9, 
+		#f021ff);
+	animation: rotate-move 45s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite;
+	border-radius: 70% 40% 60% 80% / 80% 60% 40% 80%;
+
+}
+
+.background-3{
+	position: fixed;
+	height: calc(var(--dimbackground) * 0.6);
+	width: calc(var(--dimbackground) * 0.6);
+	z-index: -98;
+	left:45vw;
+	background-image: linear-gradient(	
+		80deg, 
+		rgb(0, 76, 255), 
+		#ca10e7);
+	animation: rotate-move 35s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite; 
+	border-radius: 40% 90% 80% 30% / 70% 30% 90% 60%;
+
 
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg) scale(0.8);
-  }
   100% {
     transform: rotate(360deg) scale(1.5);
-
   }
 }
+
+@keyframes rotate-move {
+  100% {
+    transform: rotate(360deg) scale(1.5) translateX(12vw);
+  }
+}
+
 
 
 .quote{
