@@ -47,11 +47,11 @@ body{
 	}
 	.contact-field{
 		font-size: 3vw;
-		width: 80vw;
+		width: 70vw;
 	}
 
 	.contact-message{
-		width: 80vw;
+		width: 70vw;
 	}
 }
 
@@ -75,6 +75,57 @@ body{
 
 .selectable:hover{
   opacity: 0.1;
+}
+
+.links{
+	margin: 10px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+}
+
+
+.link{
+	width: 50px;
+	border-radius: 25px;
+	margin: 5px;
+	transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.link:hover{
+	transform: rotate(15deg) rotateX(30deg);
+	box-shadow: 0 5px 10px grey;
+}
+
+.link:active{
+	transform: rotate(-15deg) ;
+}
+
+.background{
+	position: fixed;
+	bottom: 20vh;
+	left: 25vw;
+	z-index: -100;
+	width: 60vh;
+  height: 60vh;
+  filter: blur(18vh);
+  background-image: linear-gradient(
+		20deg, 
+		#8BC6EC, 
+		#B721FF);
+  animation: rotate 10s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -193,3 +244,4 @@ body{
 	box-shadow: 0 0 0 0;
 	transform: translateY(0);
 }
+
