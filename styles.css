@@ -9,7 +9,7 @@
 	--gradient-2: linear-gradient(
 		20deg, 
 		#c85555, 
-		#ffaa21 50%,
+		#b700ff 50%,
 		black 50%);
 	--mode: 0;
 }
@@ -26,6 +26,9 @@ body{
 }
 
 .view-mode{
+	position: fixed;
+	left: 0;
+	bottom: 0;
 	transition: 0.5s;
 	transform: rotate(calc(var(--mode) * 180deg));
 	filter: invert(var(--mode));
@@ -102,8 +105,9 @@ body{
 }
 
 .menu-item{	
+	width: fit-content;
 	margin-top: 0;
-	margin-bottom: 40px;
+	margin-bottom: 5.5vh;
 }
 
 .name{
@@ -124,12 +128,7 @@ body{
 }
 
 .links{
-	margin: calc(3* (1vh + 1vw)/2);
 	display: block;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 99;
 }
 
 
@@ -163,9 +162,19 @@ body{
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
+.background-2{
+	bottom: 10vh;
+	left: 50vw;
+	width: 50vh;
+	height: 50vh;
+	z-index: -99;
+	animation: rotate 40s cubic-bezier(1, 0.3, 0.3, 1) alternate infinite;
+
+}
+
 @keyframes rotate {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(0.8);
   }
   100% {
     transform: rotate(360deg) scale(1.5);
@@ -269,7 +278,7 @@ body{
 	float: right;
 	clear: both;
 	color: var(--color)	;
-	background-color: rgb(142, 174, 235);	
+	background-color: cornflowerblue;	
 	font-weight:bold;
 	border-color: var(--color);
 	transition: 0.15s
@@ -279,11 +288,11 @@ body{
 .contact-submit:hover{
 	box-shadow: 0 5px 0 0;
 	transform: translateY(-5px);
-	background-color: cornflowerblue;
+	background-color: rgb(63, 124, 237);
 }
 
 .contact-submit:active{
-	background-color: rgb(45, 112, 235);
+	background-color: rgb(26, 99, 234);
 	box-shadow: 0 0 0 0;
 	transform: translateY(0);
 }

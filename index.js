@@ -25,14 +25,14 @@ function changeViewMode(mode){
         document.documentElement.style.setProperty('--bgcolor', '#000000');
         document.documentElement.style.setProperty('--mode', 1);
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #8BC6EC, #B721FF 50%, #ffffff 50%)');
-        document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #ffaa21 50%, #ffffff 50%)');
+        document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #ffffff 50%)');
         document.getElementById(mode).id = "dark";
     } else if(mode == "dark"){
         document.documentElement.style.setProperty('--color', '#0');
         document.documentElement.style.setProperty('--bgcolor', '#ffffff');
         document.documentElement.style.setProperty('--mode', 0);
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #8BC6EC, #B721FF 50%, #000000 50%)');
-        document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #ffaa21 50%, #000000 50%)');
+        document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #000000 50%)');
         document.getElementById(mode).id = "light";
     }
 }
