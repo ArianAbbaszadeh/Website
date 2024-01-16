@@ -3,7 +3,7 @@
 	--bgcolor: white;
 	--gradient: linear-gradient(
 		20deg, 
-		#8BC6EC, 
+		#2200ff, 
 		#B721FF 50%,
 		black 50%);
 	--gradient-2: linear-gradient(
@@ -259,9 +259,9 @@ body{
 	font-family: 'Courier New', monospace;
 	padding: 10px;
 	border-radius: 45px;
-	border: 5px;
+	border: 6px;
 	border-style: solid;
-	border-color:cornflowerblue;
+	border-color:rgb(194, 92, 162);
 	background-color: transparent;
 }
 
@@ -278,7 +278,7 @@ body{
 	float: right;
 	clear: both;
 	color: var(--color)	;
-	background-color: cornflowerblue;	
+	background-color: rgb(194, 92, 162);
 	font-weight:bold;
 	border-color: var(--color);
 	transition: 0.15s
@@ -288,11 +288,11 @@ body{
 .contact-submit:hover{
 	box-shadow: 0 5px 0 0;
 	transform: translateY(-5px);
-	background-color: rgb(63, 124, 237);
+	background-color: rgb(163, 37, 124);;
 }
 
 .contact-submit:active{
-	background-color: rgb(26, 99, 234);
+	background-color: rgb(26, 227, 234);
 	box-shadow: 0 0 0 0;
 	transform: translateY(0);
 }
