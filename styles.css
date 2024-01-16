@@ -26,7 +26,6 @@ body{
 }
 
 .view-mode{
-	width: 40px;
 	transition: 0.5s;
 	transform: rotate(calc(var(--mode) * 180deg));
 	filter: invert(var(--mode));
@@ -47,6 +46,15 @@ body{
 		font-size: 2vw;
 	}
 
+	.view-mode{
+		width: 2vw;
+	}
+
+	.link{
+		width: 4vw;
+		border-radius: 2vw;
+	}
+
 	.list-item{
 		font-size: 1.5vw;
 	}
@@ -64,8 +72,16 @@ body{
 }
 
 @media only screen and (max-aspect-ratio: 3/2){
+	.view-mode{
+		width: 5vw;
+	}
 	.menu{
 		font-size: 5vw;
+	}
+
+	.link{
+		width: 8vw;
+		border-radius: 4vw;
 	}
 
 	.list-item{
@@ -108,7 +124,7 @@ body{
 }
 
 .links{
-	margin: 10px;
+	margin: calc(3* (1vh + 1vw)/2);
 	display: block;
 	position: fixed;
 	bottom: 0;
@@ -118,9 +134,7 @@ body{
 
 
 .link{
-	width: 50px;
-	border-radius: 25px;
-	margin: 5px;
+	margin-right: 10px;
 	transition: transform 0.3s, box-shadow 0.5s;
 }
 
@@ -191,11 +205,7 @@ body{
 }
 
 .gradient-2{
-	background-image: linear-gradient(
-		20deg, 
-		#c85555, 
-		#ffaa21 50%,
-		var(--color) 50%);
+	background-image: var(--gradient-2);
 }
 
 .list-item:hover{
