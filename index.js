@@ -59,7 +59,7 @@ function selection(id){
 
         $(function(){
             document.getElementById("content-div").style.transition = "transform 0.5s";
-            document.getElementById("content-div").style.transform = "translateX(1000px)";
+            document.getElementById("content-div").style.transform = "translateX(2000px)";
             setTimeout(() => {
                 let tmp = id +".html";
                 $("#content-div").load(tmp);     
