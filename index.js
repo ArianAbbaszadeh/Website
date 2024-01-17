@@ -22,14 +22,17 @@ function getTextWidth(text, font) {
 function changeViewMode(mode){
     const root = document.querySelector(':root');
     if(mode == "light"){
+        document.body.classList.add("is-dark");
         root.style.setProperty('--color', '#ffffff');
         root.style.setProperty('--bgcolor', '#000000');
         root.style.setProperty('--mode', 1);
         root.style.setProperty('--gradient', 'linear-gradient(20deg, #2200ff, #B721FF 50%, #ffffff 50%)');
         root.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #ffffff 50%)');
         root.style.setProperty('--dimbackground', '47vh');
+
         document.getElementById(mode).id = "dark";
     } else if(mode == "dark"){
+        document.body.classList.remove("is-dark");
         root.style.setProperty('--color', '#0');
         root.style.setProperty('--bgcolor', '#ffffff');
         root.style.setProperty('--mode', 0);

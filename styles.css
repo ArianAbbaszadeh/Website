@@ -15,12 +15,16 @@
 	--dimbackground: min(45vw, 55vh);	
 }
 
+.is-dark{
+	color: white;
+	background-color: black;
+}
+
 body{
 	font-family: 'Courier New';
 	user-select: none;
 	margin: calc(3* (1vh + 1vw)/2);
-	background-color: var(--bgcolor);
-	color: var(--color);
+
 }
 .content{
 	float: right;
@@ -195,8 +199,6 @@ body{
 		#ca10e7);
 	animation: rotate-move 35s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite; 
 	border-radius: 40% 90% 80% 30% / 70% 30% 90% 60%;
-
-
 }
 
 @keyframes rotate {
@@ -210,8 +212,6 @@ body{
     transform: rotate(360deg) scale(1.5) translateX(12vw);
   }
 }
-
-
 
 .quote{
 	padding-right: 20vw;
