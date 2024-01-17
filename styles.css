@@ -12,7 +12,7 @@
 		#b700ff 50%,
 		black 50%);
 	--mode: 0;
-	--dimbackground: 55vh;	
+	--dimbackground: min(45vw, 55vh);	
 }
 
 body{
@@ -158,7 +158,7 @@ body{
 	z-index: -100;
 	width: var(--dimbackground);
   height: var(--dimbackground);
-  filter: blur(15vh);
+  filter: blur(min(15vh, 15vw));
 	background-image: linear-gradient(
 		20deg, 
 		rgb(166, 0, 255), 
@@ -279,18 +279,20 @@ body{
 
 .contact-top-row{
 	display: block;
+
 }
 
 .contact-field{
 	color: var(--color);
 	float: right;
-	margin: 10px;
+	margin-left: 15px;
+	margin-bottom: 15px;
 	font-family: 'Courier New', monospace;
-	padding: 10px;
-	border-radius: 45px;
-	border: 6px;
+	padding: 15px;
+	border-radius: 30px;
+	border: 4px;
 	border-style: solid;
-	border-color:rgb(194, 92, 162);
+	border-color:var(--color);
 	background-color: transparent;
 }
 
