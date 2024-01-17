@@ -27,7 +27,6 @@ function changeViewMode(mode){
         document.documentElement.style.setProperty('--mode', 1);
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #2200ff, #B721FF 50%, #ffffff 50%)');
         document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #ffffff 50%)');
-        document.documentElement.style.setProperty('--dimbackground', '47vh');
         document.getElementById(mode).id = "dark";
     } else if(mode == "dark"){
         document.body.classList.remove("is-dark");
@@ -36,7 +35,6 @@ function changeViewMode(mode){
         document.documentElement.style.setProperty('--mode', 0);
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #2200ff, #B721FF 50%, #000000 50%)');
         document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #000000 50%)');
-        document.documentElement.style.setProperty('--dimbackground', '55vh');
         document.getElementById(mode).id = "light";
     }
     }
@@ -66,9 +64,10 @@ function selection(id){
             document.getElementById("content-div").style.transform = "translateX(2000px)";
             setTimeout(() => {
                 let tmp = id +".html";
-                $("#content-div").load(tmp);     
-                document.getElementById("content-div").style.transform = "translateX(0px)";
-            },500);
+                $("#content-div").load(tmp, () => {    
+                        document.getElementById("content-div").style.transform = "translateX(0px)";
+                });
+            }, 500);
         });
     }
 }

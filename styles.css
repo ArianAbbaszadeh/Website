@@ -12,7 +12,7 @@
 		#b700ff 50%,
 		black 50%);
 	--mode: 0;
-	--dimbackground: min(45vw, 55vh);	
+	--dimbackground: min(45vw, 45vh);	
 }
 
 .is-dark{
@@ -298,6 +298,7 @@ body{
 }
 
 .contact-message{
+	padding: 19px;
 	display: block;
 }
 
