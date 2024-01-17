@@ -112,6 +112,7 @@ body{
 }
 
 .name{
+	transition: 0.3s;
 	cursor: default;
 }
 .reactive{
@@ -200,7 +201,7 @@ body{
 
 @keyframes rotate {
   100% {
-    transform: rotate(360deg) scale(1.5);
+    transform: rotate(360deg) scale(1.5) translateX(8vw);
   }
 }
 
