@@ -1,8 +1,8 @@
-<div class="contact">
+<form class="contact" action="https://formsubmit.co/abbaszadeharian@gmail.com" method="POST">
   <div class="contact-top-row">
-    <input type=text class="contact-field" placeholder="Name">
-    <input type=text class="contact-field" placeholder="E-mail">
+    <input type=email name="email" class="contact-field" placeholder="E-mail" required>
+    <input type=text name="name" class="contact-field" placeholder="Name" required>
   </div>
-  <textarea rows="5" class="contact-field contact-message" placeholder="Write your message"></textarea>
+  <textarea name="message" rows="5" class="contact-field contact-message" placeholder="Write your message" required></textarea>
   <button onclick="" class="contact-field contact-submit"> Submit </button>
-</div>
+</form>

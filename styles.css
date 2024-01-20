@@ -29,19 +29,31 @@ body{
 .content{
 	float: right;
 }
-
 .view-mode{
 	position: fixed;
-	left: 0;
+	left: calc(0.5vw + 0.5vh);
+	bottom: calc(0.5vw + 0.5vh);
+}
+
+.view-mode-image{
+	padding: 0;
+	position: relative;
+	left:0;
 	bottom: 0;
 	transition: 0.5s;
 	transform: rotate(calc(var(--mode) * 180deg));
 	filter: invert(var(--mode));
 }
 
-.view-mode:hover{
+.view-mode-image:hover{
 	transform: rotate(calc((1 - var(--mode)) * 180deg));
 	filter: invert(calc(1 - var(--mode)));
+}
+
+.view-mode-text{
+	text-align: center;
+	position: relative;
+	transition: 1s;
 }
 
 .menu{
@@ -50,12 +62,17 @@ body{
 }
 
 @media only screen and (min-aspect-ratio: 3/2){
+
 	.menu{
 		font-size: 2vw;
 	}
 
+	.view-mode-text{
+		font-size: 1vw;
+	}
+
 	.view-mode{
-		width: 2vw;
+		width: 2.5vw;
 	}
 
 	.link{
@@ -65,6 +82,7 @@ body{
 
 	.list-item{
 		font-size: 1.5vw;
+		max-width: 55vw;
 	}
 
 	.quote{
@@ -75,7 +93,7 @@ body{
 		width: 20vw;
 	}
 	.contact-message{
-		width: calc(40vw + 45px);
+		width: calc(40vw + 50px);
 	}
 }
 
@@ -83,6 +101,11 @@ body{
 	.view-mode{
 		width: 5vw;
 	}
+
+	.view-mode-text{
+		font-size: 2vw;
+	}
+
 	.menu{
 		font-size: 5vw;
 	}
@@ -98,6 +121,7 @@ body{
 
 	.quote{
 		font-size: 3vw;
+		margin-bottom: 4vh;
 	}
 	.contact-field{
 		font-size: 3vw;
@@ -168,7 +192,7 @@ body{
 		20deg, 
 		rgb(166, 0, 255), 
 		#109ce7);
-  animation: rotate 60s cubic-bezier(0, 0.3, 0.3, 1) alternate infinite;
+  animation: rotate 20s cubic-bezier(0, 0.3, 0.3, 1) alternate infinite;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
@@ -182,7 +206,7 @@ body{
 		20deg, 
 		#00ffd9, 
 		#f021ff);
-	animation: rotate-move 45s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite;
+	animation: rotate-move 15s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite;
 	border-radius: 70% 40% 60% 80% / 80% 60% 40% 80%;
 
 }
@@ -197,7 +221,7 @@ body{
 		80deg, 
 		rgb(0, 76, 255), 
 		#ca10e7);
-	animation: rotate-move 35s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite; 
+	animation: rotate-move 12s cubic-bezier(1, 0.8, 0.3, 1) alternate infinite; 
 	border-radius: 40% 90% 80% 30% / 70% 30% 90% 60%;
 }
 
@@ -216,9 +240,11 @@ body{
 .quote{
 	padding-right: 20vw;
 	padding-top: 20vh;
+	margin-bottom: 8vh;
 	width: 100px;
 	vertical-align: top;
 	cursor:default;
+
 }
 
 .list {
@@ -298,7 +324,6 @@ body{
 }
 
 .contact-message{
-	padding: 19px;
 	display: block;
 }
 

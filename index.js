@@ -28,6 +28,7 @@ function changeViewMode(mode){
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #2200ff, #B721FF 50%, #ffffff 50%)');
         document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #ffffff 50%)');
         document.getElementById(mode).id = "dark";
+        document.getElementById("mode-text").textContent = "Dark";
     } else if(mode == "dark"){
         document.body.classList.remove("is-dark");
         document.documentElement.style.setProperty('--color', '#0');
@@ -36,6 +37,7 @@ function changeViewMode(mode){
         document.documentElement.style.setProperty('--gradient', 'linear-gradient(20deg, #2200ff, #B721FF 50%, #000000 50%)');
         document.documentElement.style.setProperty('--gradient-2', 'linear-gradient(20deg, #c85555, #b700ff 50%, #000000 50%)');
         document.getElementById(mode).id = "light";
+        document.getElementById("mode-text").textContent = "Light";
     }
     }
 
